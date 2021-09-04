@@ -9,8 +9,9 @@ const chatController = require('../controllers/chatController');
 const upload = require('../utils/fileUpload');
 const router = express.Router();
 const eventsController = require('../controllers/eventsController');
+const sendRecoveryToken = require('../middlewares/sendRecoveryToken');
 
-//events
+//-----Events
 
 router.post(
   '/events/create',
@@ -25,6 +26,21 @@ router.delete(
 router.post(
   '/events',
   eventsController.getAllEvents,
+);
+
+//-----Recovery password
+
+router.post(
+  '/recoveryRequest',
+  hashPass,
+  userController.recoveryPasswordRequest,
+  sendRecoveryToken,
+);
+
+router.post(
+  '/changePassword',
+  checkToken.checkRecoveryToken,
+  userController.changePassword,
 );
 
 router.post(

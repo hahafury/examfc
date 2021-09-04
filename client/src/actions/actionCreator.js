@@ -311,3 +311,39 @@ export const eventErrorClear = (data, history) => ({
   data,
   history,
 });
+
+//-----Recovery Password
+
+export const recoveryPassword = (data, history) => ({
+  type: ACTION.RECOVERY_PASSWORD,
+  data,
+  history,
+});
+
+export const recoveryClear = (data, history) => ({
+  type: ACTION.RECOVERY_PASSWORD_CLEAR,
+  data,
+  history,
+});
+
+export const recoveryError = (data, history) => ({
+  type: ACTION.RECOVERY_PASSWORD_ERROR,
+  data,
+  history,
+});
+
+export const changePassword = (data, history) => ({
+  type: ACTION.CHANGE_PASSWORD,
+  data,
+  history,
+});
+
+export const changePasswordError = (data, history) => ({
+  type: ACTION.CHANGE_PASSWORD_ERROR,
+  data,
+});
+
+export const changePasswordErrorClear = (data, history) => ({
+  type: ACTION.CHANGE_PASSWORD_ERROR_CLEAR,
+  data,
+});

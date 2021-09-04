@@ -205,4 +205,32 @@ module.exports.cashout = async (req, res, next) => {
   }
 };
 
+//-----Password recovery
+
+module.exports.recoveryPasswordRequest = async (req, res, next) => {
+  try{
+    console.log('---------------------------------------------------------');
+    const foundUser = await userQueries.findUser({ email: req.body.email });
+    const recovery = jwt.sign({
+      userId: foundUser.id,
+      password: req.hashPass,
+    }, CONSTANTS.JWT_SECRET, { expiresIn: CONSTANTS.ACCESS_TOKEN_TIME });
+    console.log(recovery);
+    Object.assign(req.body, { recoveryToken: recovery });
+    await userQueries.updateUser({ recovery }, foundUser.id);
+    next();
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports.changePassword = async (req, res, next) => {
+  try{
+    const tokenData = jwt.verify(req.body.recovery, CONSTANTS.JWT_SECRET);
+    await userQueries.updateUser( { password: tokenData.password, recovery: null } , tokenData.userId);
+  } catch (err) {
+    next(err);
+  }
+};
+
 

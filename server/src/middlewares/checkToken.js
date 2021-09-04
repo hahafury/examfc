@@ -38,3 +38,14 @@ module.exports.checkToken = async (req, res, next) => {
     next(new TokenError());
   }
 };
+
+module.exports.checkRecoveryToken = async (req, res, next) => {
+  try {
+    if (!userQueries.findUser({ recovery: req.body.recovery })) {
+      return next(new ServerError('Link is invalid'));
+    };
+    next();
+  } catch (err) {
+    next(new TokenError());
+  }
+};

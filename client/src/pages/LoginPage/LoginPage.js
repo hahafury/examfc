@@ -20,6 +20,14 @@ const LoginPage = (props) => (
             <span>Signup</span>
           </Link>
         </div>
+        <div className={styles.linkRecoveryContainer}>
+          <Link
+            to="/recovery"
+            style={{ textDecoration: 'none' }}
+          >
+            <span>Forgot password?</span>
+          </Link>
+        </div>
       </div>
       <div className={styles.loginFormContainer}>
         <LoginForm history={props.history} />

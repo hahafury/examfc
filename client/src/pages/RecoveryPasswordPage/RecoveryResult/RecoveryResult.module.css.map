@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,4BAA4B,CAAC;EACzB,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,UAAU;EAC3B,WAAW,EAAE,UAAU;EACvB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;CAMW;;AAd5B,AAUI,4BAVwB,CAUxB,EAAE,CAAC;EACC,SAAS,EAAE,IAAI;CAAG;;AAX1B,AAaI,4BAbwB,CAaxB,CAAC,CAAC;EACE,SAAS,EAAE,IAAI;CAAG",
+    "sources": [
+        "RecoveryResult.module.sass"
+    ],
+    "names": [],
+    "file": "RecoveryResult.module.css"
+}

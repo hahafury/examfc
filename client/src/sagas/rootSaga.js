@@ -28,9 +28,12 @@ import {
   changeCatalogName,
 } from './chatSagas';
 import { createEvent } from './eventSagas';
+import * as recoverySaga from './recoverySagas';
 
 function* rootSaga() {
   yield takeLatest(ACTION.CREATE_EVENT, createEvent);
+  yield takeLeading(ACTION.RECOVERY_PASSWORD, recoverySaga.recoverySaga);
+  yield takeLeading(ACTION.CHANGE_PASSWORD, recoverySaga.changePassword);
   yield takeLatest(ACTION.AUTH_ACTION_REGISTER, registerSaga);
   yield takeLatest(ACTION.AUTH_ACTION_LOGIN, loginSaga);
   yield takeLatest(ACTION.PAYMENT_ACTION, paymentSaga);
