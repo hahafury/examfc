@@ -24,6 +24,9 @@ fs
     db[ model.name ] = model;
   });
 
+db[ 'Events' ].belongsTo(db[ 'Users' ],
+  { foreignKey: 'eventOwner', sourceKey: 'id' });
+
 db[ 'Contests' ].belongsTo(db[ 'Users' ],
   { foreignKey: 'userId', sourceKey: 'id' });
 db[ 'Contests' ].hasMany(db[ 'Offers' ],

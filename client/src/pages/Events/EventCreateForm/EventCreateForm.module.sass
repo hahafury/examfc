@@ -1,0 +1,207 @@
+.eventCreateFormWrapper 
+    margin: 0 auto
+
+    form
+
+    h2
+        padding-left: 20px
+        font-size: 23px
+        margin-bottom: 15px
+        
+    div
+        display: flex
+        flex-direction: row
+
+        &:nth-child(1)
+            width: 100%
+                
+
+        .inputContainer
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-self: stretch
+            margin-right: 20px
+            margin-left: 20px
+
+            .fieldWarning
+                font-size: 15px
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-items: center
+                color: white
+                border: 1px solid #b72522
+                margin-bottom: 15px
+                padding-bottom: 5px
+                padding-top: 5px
+                text-align: center
+                color: red
+
+            .input
+                background-color: white
+                border: 1px solid #455a89
+                border-radius: 4px
+                color: #9ca8b7
+                font-size: 14px
+                padding: 12px 10px 12px 10px
+                outline: none
+                margin-bottom: 15px
+                flex: 1
+                width: 100px
+                @media(max-width: 1400px)
+                    align-self: normal
+            
+            input[name = "eventInfo"]
+                width: 100%
+
+
+.warning
+    font-size: 18px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 2px solid #b72522
+    border-radius: 4px
+    padding: 3px 20px
+    color: #333
+    
+.selectInputContainer
+    margin: 15px 0 0 0
+    display: flex
+    flex-direction: column
+    width: 100%
+
+    .select
+        width: 550px
+        height: 46px
+        box-sizing: border-box
+        box-shadow: none
+        display: flex
+        align-items: center
+        font-size: 18px
+        background-color: white
+        border: 2px solid #d0d0d0
+        border-radius: 4px
+        cursor: text
+        margin-bottom: 15px
+        outline: none
+        padding: 0 10px
+        color: #555
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+        @media(max-width: 700px)
+            width: min-content
+
+        &:focus
+            border: 2px solid #28d2d0
+
+    .selectHeader
+        display: inline-block
+        font-size: 19px
+        color: #585859
+        font-weight: 700
+        margin-top: 12px
+        margin-bottom: 5px
+    
+.submitContainer
+    align-self: stretch
+    min-width: 260px
+    border-radius: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #28d2d0
+    height: 64px
+    margin-left: 20px
+    padding: 0
+    border: 0
+    width: fill-available
+    margin-right: 20px
+    @media(max-width: 850px)
+        align-self: auto
+
+
+    .inscription
+        font-size: 16px
+        color: white
+
+    .inputContainer
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-self: stretch
+        margin-right: 20px
+        margin-left: 20px
+
+    .fieldWarning
+        font-size: 15px
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        color: white
+        border: 1px solid #b72522
+        margin-bottom: 15px
+        padding-bottom: 5px
+        padding-top: 5px
+        text-align: center
+
+    .input
+        background-color: white
+        border: none
+        border-radius: 4px
+        color: #9ca8b7
+        font-size: 18px
+        padding: 23px 20px 23px 20px
+        outline: none
+        margin-bottom: 15px
+        flex: 1
+        @media(max-width: 1400px)
+            align-self: normal
+
+    .notValid
+        border: 2px solid red !important
+
+    .valid
+        border: 2px solid green
+
+
+    .error
+        align-self: stretch
+        margin-right: 40px
+        margin-left: 40px
+        background: red
+        color: white
+        font-size: 17px
+        letter-spacing: 0.6px
+        border: 1px solid white
+        border-radius: 8px
+        text-align: center
+        padding-right: 30px
+        padding-left: 30px
+        padding-top: 20px
+        padding-bottom: 20px
+        margin-top: 15px
+        margin-bottom: 20px
+
+
+    .errorValid
+        font-size: 14px
+        text-align: center
+        border: 1px solid red
+        align-self: stretch
+        margin-left: 20px
+        margin-right: 20px
+        color: white
+        padding-top: 6px
+        padding-bottom: 6px
+        margin-top: 5px
+        margin-bottom: 15px
+
+    h2
+        text-align: center
+        font-size: 34px
+        letter-spacing: 0.6px
+        color: white
+        margin-top: 20px
+        margin-bottom: 28px

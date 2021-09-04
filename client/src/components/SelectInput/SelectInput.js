@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import { Field, ErrorMessage } from 'formik';
+import styles from './SelectInput.module.sass';
 
 const SelectInput = ({
   header,

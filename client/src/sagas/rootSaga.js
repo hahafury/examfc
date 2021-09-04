@@ -27,8 +27,10 @@ import {
   removeChatFromCatalogSaga,
   changeCatalogName,
 } from './chatSagas';
+import { createEvent } from './eventSagas';
 
 function* rootSaga() {
+  yield takeLatest(ACTION.CREATE_EVENT, createEvent);
   yield takeLatest(ACTION.AUTH_ACTION_REGISTER, registerSaga);
   yield takeLatest(ACTION.AUTH_ACTION_LOGIN, loginSaga);
   yield takeLatest(ACTION.PAYMENT_ACTION, paymentSaga);

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,SAAS,EAAE,eAAe;EAC1B,KAAK,EAAE,kBAAkB;EACzB,WAAW,EAAE,GAAG;EAChB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;CAAG",
+    "sources": [
+        "EventTimer.module.sass"
+    ],
+    "names": [],
+    "file": "EventTimer.module.css"
+}

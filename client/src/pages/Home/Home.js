@@ -8,11 +8,20 @@ import Footer from '../../components/Footer/Footer';
 import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
+import {getAllEvents} from '../../api/rest/restController';
+import jwt_decode from 'jwt-decode';
 
 const Home = (props) => {
   const [index, setIndex] = useState(0);
   const [styleName, setStyle] = useState(styles.headline__static);
   let timeout;
+
+  if(localStorage.getItem('accessToken') !== null && localStorage.getItem('events') == null ){
+    getAllEvents({userId: jwt_decode(localStorage.getItem("accessToken")).userId})
+    .then(data => {
+      localStorage.setItem('events',JSON.stringify(data.data.data));
+    });
+  };
 
   useEffect(() => {
     timeout = setInterval(() => {

@@ -292,3 +292,22 @@ export const changeModalShow = (data) => ({
   type: ACTION.CHANGE_SHOW_MODAL,
   data,
 });
+
+//-----Events
+
+export const changeEventsModeView = (data, history) => ({
+  type: ACTION.CHANGE_EVENTS_MODE_VIEW,
+  data,
+});
+
+export const createEvent = (data, history) => ({
+  type: ACTION.CREATE_EVENT,
+  data,
+  history,
+});
+
+export const eventErrorClear = (data, history) => ({
+  type: ACTION.EVENT_CLEAR_ERROR,
+  data,
+  history,
+});
