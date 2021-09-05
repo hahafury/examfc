@@ -1,0 +1,149 @@
+.signUpPage {
+  background-color: #3ea9f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signUpPage .footer {
+  padding-top: 80px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signUpPage .footer .articlesMainContainer {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 300px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 1000px) {
+  .signUpPage .footer .articlesMainContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.signUpPage .footer .articlesMainContainer .ColumnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: 48px;
+  margin-left: 48px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.signUpPage .footer .articlesMainContainer .ColumnContainer .headerArticle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #363945;
+  margin-bottom: 20px;
+}
+
+.signUpPage .footer .articlesMainContainer .ColumnContainer .article {
+  color: #9ca8b7;
+  line-height: 30px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.signUpPage .footer .articlesMainContainer .ColumnContainer .article .orangeSpan {
+  color: #f18762;
+}
+
+.signUpPage .signUpContainer {
+  width: 72%;
+  padding: 20px;
+  min-width: 280px;
+  min-height: 650px;
+  padding-top: 40px;
+}
+
+.signUpPage .signUpContainer .headerSignUpPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 26px;
+  padding-left: 45px;
+  padding-right: 60px;
+}
+
+@media (max-width: 530px) {
+  .signUpPage .signUpContainer .headerSignUpPage {
+    padding: 0;
+  }
+}
+
+.signUpPage .signUpContainer .linkLoginContainer {
+  border: 1px solid white;
+  width: 80px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  height: 40px;
+  text-decoration: none;
+}
+
+.signUpPage .signUpContainer .linkLoginContainer span {
+  color: white;
+}
+/*# sourceMappingURL=RegistrationPage.module.css.map */

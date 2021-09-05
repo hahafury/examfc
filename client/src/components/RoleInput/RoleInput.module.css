@@ -1,0 +1,47 @@
+.roleContainer {
+  border: 1px solid white;
+  padding: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.roleContainer .infoRoleContainer {
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.roleContainer .infoRoleContainer .role {
+  color: white;
+  font-size: 22px;
+}
+
+.roleContainer .infoRoleContainer .infoRole {
+  color: white;
+  font-size: 12px;
+}
+/*# sourceMappingURL=RoleInput.module.css.map */

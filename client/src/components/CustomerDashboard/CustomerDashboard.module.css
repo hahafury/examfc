@@ -1,0 +1,147 @@
+.mainContainer {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (max-width: 1400px) {
+  .mainContainer {
+    width: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .mainContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.mainContainer .errorContainer {
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 260px;
+  padding: 15px;
+}
+
+.mainContainer .errorContainer .message {
+  color: red;
+  font-size: 18px;
+}
+
+.mainContainer .errorContainer .try {
+  color: #333;
+  font-size: 18px;
+}
+
+.mainContainer .contestsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.mainContainer .filterContainer {
+  min-width: 250px;
+  height: 350px;
+  padding-top: 30px;
+  margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1000px) {
+  .mainContainer .filterContainer {
+    padding-top: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-right: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 80px;
+  }
+}
+
+.mainContainer .filterContainer .filter {
+  margin-top: 15px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  text-align: center;
+  color: #46568a;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  .mainContainer .filterContainer .filter {
+    height: 20px;
+    margin: 0 5px;
+  }
+}
+
+.mainContainer .filterContainer .filter:hover {
+  background-color: #eefaea;
+}
+
+.mainContainer .filterContainer .activeFilter {
+  -webkit-transition: 0.5s background-color;
+  transition: 0.5s background-color;
+  margin-top: 15px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #4e618d;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .mainContainer .filterContainer .activeFilter {
+    height: 20px;
+    margin: 0 5px;
+  }
+}
+/*# sourceMappingURL=CustomerDashboard.module.css.map */

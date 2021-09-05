@@ -1,0 +1,71 @@
+.errorContainer {
+  width: auto;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 18px;
+  padding: 15px 10px;
+  background-color: red;
+  position: absolute;
+  top: 80px;
+  cursor: pointer;
+  left: 80px;
+}
+
+.errorContainer .container {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 26px;
+  width: 120px;
+  background-color: red;
+  position: relative;
+}
+
+.errorContainer .container span {
+  font-size: 16px;
+  color: white;
+}
+
+.errorContainer .container i {
+  color: blue;
+  font-size: 26px;
+  position: absolute;
+  cursor: pointer;
+  top: -4px;
+  right: -4px;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+}
+
+.errorContainer .container i:hover {
+  color: white;
+  font-size: 30px;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+}
+/*# sourceMappingURL=ChatError.module.css.map */

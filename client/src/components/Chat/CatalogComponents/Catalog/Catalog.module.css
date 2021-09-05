@@ -1,0 +1,66 @@
+.catalogContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 50px;
+  cursor: pointer;
+  border-bottom: 1px solid #4e618d;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  padding: 0 10px;
+}
+
+.catalogContainer .infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.catalogContainer .infoContainer .numbers {
+  margin-left: 5px;
+}
+
+.catalogContainer .infoContainer i {
+  margin-left: 10px;
+  font-size: 18px;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+}
+
+.catalogContainer .infoContainer i:hover {
+  color: red;
+  font-size: 24px;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+}
+
+.catalogContainer:hover {
+  background-color: #e5e5e5;
+}
+
+.catalogContainer .catalogName {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  width: 110px;
+  color: black;
+}
+/*# sourceMappingURL=Catalog.module.css.map */

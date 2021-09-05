@@ -1,0 +1,304 @@
+.signUpFormContainer {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 280px;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 80px;
+  padding: 10px 20px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.signUpFormContainer .choseRoleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  min-width: 260px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 850px) {
+  .signUpFormContainer .choseRoleContainer {
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+  }
+}
+
+.signUpFormContainer .submitContainer {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  min-width: 260px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #28d2d0;
+  height: 64px;
+  margin-left: 20px;
+  padding: 0;
+  border: 0;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  margin-right: 20px;
+}
+
+@media (max-width: 850px) {
+  .signUpFormContainer .submitContainer {
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+  }
+}
+
+.signUpFormContainer .inscription {
+  font-size: 16px;
+  color: white;
+}
+
+.signUpFormContainer .termsOfService {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  min-width: 260px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.signUpFormContainer .termsOfService .fieldWarning {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border: 1px solid #b72522;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .signUpFormContainer .termsOfService {
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+  }
+}
+
+.signUpFormContainer .termsOfService a {
+  color: white;
+  font-size: 16px;
+}
+
+.signUpFormContainer .error {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  min-width: 260px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  margin-right: 20px;
+  margin-left: 20px;
+  border: 1px solid white;
+  background-color: red;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 850px) {
+  .signUpFormContainer .error {
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+  }
+}
+
+.signUpFormContainer .row {
+  width: 100%;
+  min-width: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 795px) {
+  .signUpFormContainer .row {
+    width: auto;
+  }
+}
+
+.signUpFormContainer .row .inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-right: 20px;
+  margin-left: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+}
+
+.signUpFormContainer .row .inputContainer .fieldWarning {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border: 1px solid #b72522;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.signUpFormContainer .row .input {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  color: #9ca8b7;
+  font-size: 18px;
+  padding: 23px 20px 23px 20px;
+  outline: none;
+  margin-bottom: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media (max-width: 1400px) {
+  .signUpFormContainer .row .input {
+    -ms-flex-item-align: normal;
+        -ms-grid-row-align: normal;
+        align-self: normal;
+  }
+}
+
+.signUpFormContainer .row .notValid {
+  border: 2px solid red !important;
+}
+
+.signUpFormContainer .row .valid {
+  border: 2px solid green;
+}
+
+.signUpFormContainer .headerFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.signUpFormContainer .headerFormContainer h2 {
+  color: white;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.signUpFormContainer .headerFormContainer h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  word-spacing: 3px;
+  width: 88%;
+  margin: 0;
+  margin-bottom: 13px;
+  text-align: center;
+  line-height: 27px;
+}
+/*# sourceMappingURL=RegistrationForm.module.css.map */

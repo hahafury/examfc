@@ -1,0 +1,42 @@
+.listContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  max-height: 290px;
+  overflow: auto;
+}
+
+.listContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.listContainer::-webkit-scrollbar-track {
+  background: #f3f3f3;
+}
+
+.listContainer::-webkit-scrollbar-thumb {
+  background: #6b89b0;
+}
+
+.listContainer .notFound {
+  width: 100%;
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4e618d;
+  text-align: center;
+}
+/*# sourceMappingURL=CatalogListContainer.module.css.map */

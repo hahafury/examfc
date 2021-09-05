@@ -1,0 +1,184 @@
+.footerContainer {
+  width: 100%;
+}
+
+.footerContainer .bottomFooterContainer {
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #232828;
+}
+
+.footerContainer .bottomFooterContainer .bottomFooterWrapper {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .footerContainer .bottomFooterContainer .bottomFooterWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footerContainer .bottomFooterContainer .bottomFooterWrapper .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footerContainer .bottomFooterContainer .bottomFooterWrapper .logo span {
+  float: left;
+  padding: 10px 0 10px 30px;
+  margin: 0 0 5px 33px;
+  border-left: 1px solid #3d4141;
+  font-size: 14px;
+  color: #666868;
+}
+
+.footerContainer .bottomFooterContainer .bottomFooterWrapper .socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footerContainer .bottomFooterContainer .bottomFooterWrapper .socialLinks .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  margin-left: 15px;
+}
+
+.footerContainer .footerTop {
+  width: 100%;
+  background-color: #2B3030;
+  padding: 80px 0;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footerContainer .footerTop div {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .footerContainer .footerTop div {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .footerContainer .footerTop div {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footerContainer .footerTop div {
+    width: 1170px;
+  }
+}
+
+.footerContainer .footerTop div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px;
+}
+
+.footerContainer .footerTop div div h4 {
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.footerContainer .footerTop div div a {
+  padding-bottom: 7px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #767979;
+}
+
+.footerContainer .footerTop div div a:hover {
+  color: #f9764b;
+}
+/*# sourceMappingURL=Footer.module.css.map */

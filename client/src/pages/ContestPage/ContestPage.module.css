@@ -1,0 +1,202 @@
+.notFound {
+  color: #455a89;
+  font-size: 20px;
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.errorContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: red;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+.errorContainer .messageError {
+  color: red;
+  font-size: 20px;
+}
+
+.errorContainer .try {
+  color: #455a89;
+  font-size: 20px;
+}
+
+.containerSpinner {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.tryContainer {
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 250px;
+}
+
+.mainInfoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  padding-top: 20px;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1200px) {
+  .mainInfoContainer {
+    width: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .mainInfoContainer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.mainInfoContainer .infoContainer {
+  width: 80%;
+  -webkit-box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.1);
+  margin-right: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (max-width: 680px) {
+  .mainInfoContainer .infoContainer {
+    width: auto;
+    margin: 10px;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+}
+
+.mainInfoContainer .infoContainer .offersContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  border-top: 1px solid #f3f3f3;
+  padding: 15px;
+}
+
+.mainInfoContainer .infoContainer .offersContainer .offers {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 10px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.mainInfoContainer .infoContainer .buttonsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  background-color: #f3f3f3;
+}
+
+.mainInfoContainer .infoContainer .buttonsContainer .btn {
+  cursor: pointer;
+  background-color: #6b8ab1;
+  margin-right: 7px;
+  padding: 11px 15px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  color: white;
+  border-radius: 4px 4px 0 0;
+}
+
+.mainInfoContainer .infoContainer .buttonsContainer .btn:hover {
+  background-color: rgba(176, 196, 222, 0.8);
+}
+
+.mainInfoContainer .infoContainer .buttonsContainer .activeBtn {
+  background-color: white;
+  color: #333;
+}
+
+.mainInfoContainer .infoContainer .buttonsContainer .activeBtn:hover {
+  background-color: white;
+}
+/*# sourceMappingURL=ContestPage.module.css.map */

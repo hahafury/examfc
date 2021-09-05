@@ -1,0 +1,126 @@
+.inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #f3f3f3;
+  padding: 0 15px;
+  margin-top: 8px;
+  padding-top: 7px;
+}
+
+.inputContainer:last-child {
+  border: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.inputContainer .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inputContainer .form button {
+  position: relative;
+  padding: 0;
+  border: none;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.inputContainer .form img {
+  position: absolute;
+  margin-left: 20px;
+  cursor: pointer;
+  top: -15px;
+  left: -8px;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transform: rotate(150deg);
+          transform: rotate(150deg);
+}
+
+.inputContainer .form img:hover {
+  width: 35px;
+  height: 35px;
+}
+
+.inputContainer .form .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inputContainer .form .container .fieldWarning {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border: 1px solid #b72522;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.inputContainer .form .container .notValid {
+  border: 1px solid red !important;
+}
+
+.inputContainer .form .container .input {
+  height: 20px;
+  outline: none;
+  border-radius: 6px;
+  padding: 6px;
+  border: 2px solid #d0d0d0;
+}
+
+.inputContainer .form .container .input:focus {
+  -webkit-transition: border 0.5s;
+  transition: border 0.5s;
+  border-color: #28d2d0;
+}
+
+.inputContainer .form .container .input:hover {
+  -webkit-transition: border 0.5s;
+  transition: border 0.5s;
+  border-color: #28d2d0;
+}
+/*# sourceMappingURL=ChatInput.module.css.map */

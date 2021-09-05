@@ -1,0 +1,160 @@
+.errorContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: red;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+.contestForm {
+  padding: 20px 0;
+  margin: 20px 30px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  border-top: 1px solid #f3f3f3;
+}
+
+.mainContestInfoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  padding-top: 20px;
+  margin: 0 25px;
+  margin-top: 20px;
+  padding-bottom: 25px;
+  border-top: 1px solid #f3f3f3;
+}
+
+.mainContestInfoContainer .infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.mainContestInfoContainer .infoContainer .contestTypeContainer {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainContestInfoContainer .infoContainer .contestTypeContainer i {
+  font-size: 36px;
+  color: #4e618d;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+}
+
+.mainContestInfoContainer .infoContainer .contestTypeContainer i:hover {
+  font-size: 44px;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+}
+
+.mainContestInfoContainer .infoContainer .contestTypeContainer .editBtn {
+  margin-right: 15px;
+  color: white;
+  font-size: 20px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  background-color: #8aca6b;
+}
+
+.mainContestInfoContainer .infoContainer .contestTypeContainer .editBtn:hover {
+  background-color: #6b8ab1;
+}
+
+.mainContestInfoContainer .infoContainer .dataContainer {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.mainContestInfoContainer .infoContainer .dataContainer .data {
+  color: #515b5f;
+  font-size: 15px;
+  padding: 0;
+  padding-top: 8px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: white;
+  resize: none;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  overflow: visible;
+  overflow-wrap: break-word;
+}
+
+.mainContestInfoContainer .infoContainer .dataContainer .label {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.mainContestInfoContainer .infoContainer .dataContainer .file {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  text-decoration: underline;
+}
+
+.mainContestInfoContainer .infoContainer .dataContainer .file:hover {
+  color: #6b89b0;
+}
+/*# sourceMappingURL=Brief.module.css.map */

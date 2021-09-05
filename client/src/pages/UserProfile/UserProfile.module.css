@@ -1,0 +1,153 @@
+.mainContainer {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 100px;
+}
+
+@media (max-width: 800px) {
+  .mainContainer {
+    padding: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 590px) {
+  .mainContainer {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 345px) {
+  .mainContainer {
+    padding: 10px 0;
+  }
+}
+
+.mainContainer .notMoney {
+  margin-bottom: 20px;
+  color: #455a89;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mainContainer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.mainContainer .aside {
+  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 800px) {
+  .mainContainer .aside {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.mainContainer .aside .headerAside {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  font-size: 18px;
+  padding: 20px 26px;
+  background-color: #f3f3f3;
+  font-weight: 500;
+}
+
+.mainContainer .aside .optionsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
+
+.mainContainer .aside .optionsContainer .optionContainer {
+  border-radius: 8px;
+  margin-top: 5px;
+  cursor: pointer;
+  color: #455a89;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 58px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+@media (max-width: 800px) {
+  .mainContainer .aside .optionsContainer .optionContainer {
+    text-align: center;
+  }
+}
+
+.mainContainer .aside .optionsContainer .optionContainer:hover {
+  background-color: #455a89;
+  color: white;
+}
+
+.mainContainer .aside .optionsContainer .currentOption {
+  background-color: #455a89;
+  color: white;
+}
+/*# sourceMappingURL=UserProfile.module.css.map */
