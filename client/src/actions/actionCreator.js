@@ -295,7 +295,7 @@ export const changeModalShow = (data) => ({
 
 //-----Events
 
-export const changeEventsModeView = (data, history) => ({
+export const changeEventsModeView = (data) => ({
   type: ACTION.CHANGE_EVENTS_MODE_VIEW,
   data,
 });
@@ -345,5 +345,17 @@ export const changePasswordError = (data, history) => ({
 
 export const changePasswordErrorClear = (data, history) => ({
   type: ACTION.CHANGE_PASSWORD_ERROR_CLEAR,
+  data,
+});
+
+//-----Moderation contests
+
+export const moderationVerdict = (data) => ({
+  type: ACTION.MODERATION_CONTEST_VERDICT,
+  data,
+});
+
+export const moderationContestsClearError = (data) => ({
+  type: ACTION.MODERATION_CONTEST_ERROR_CLEAR,
   data,
 });

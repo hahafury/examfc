@@ -39,12 +39,12 @@ class CustomerDashboard extends React.Component {
       const array = [];
       const { contests } = this.props;
       for (let i = 0; i < contests.length; i++) {
-        array.push(<ContestBox
-          data={contests[i]}
-          key={contests[i].id}
-          goToExtended={this.goToExtended}
-        />);
-      }
+          array.push(<ContestBox
+            data={contests[i]}
+            key={contests[i].id}
+            goToExtended={this.goToExtended}
+          />);
+      };
       return array;
     };
 
@@ -90,25 +90,33 @@ class CustomerDashboard extends React.Component {
             >
               Inactive contests
             </div>
+            <div
+              onClick={() => this.props.newFilter(CONSTANTS.CONTEST_STATUS_CHECKING)}
+              className={classNames({
+                [styles.activeFilter]: CONSTANTS.CONTEST_STATUS_CHECKING === customerFilter,
+                [styles.filter]: CONSTANTS.CONTEST_STATUS_CHECKING !== customerFilter,
+              })}
+              >
+                On moderator's checking
+              </div>
           </div>
           <div className={styles.contestsContainer}>
             {
-                        error
-                          ? <TryAgain getData={this.tryToGetContest()} />
-                          : (
-                            <ContestsContainer
-                              isFetching={this.props.isFetching}
-                              loadMore={this.loadMore}
-                              history={this.props.history}
-                              haveMore={haveMore}
-                            >
-                              {this.setContestList()}
-                            </ContestsContainer>
-                          )
-                    }
+              error
+                ? <TryAgain getData={this.tryToGetContest()} />
+                : (
+                  <ContestsContainer
+                    isFetching={this.props.isFetching}
+                    loadMore={this.loadMore}
+                    history={this.props.history}
+                    haveMore={haveMore}
+                  >
+                    {this.setContestList()} 
+                  </ContestsContainer>
+                )
+              }
           </div>
         </div>
-
       );
     }
 }

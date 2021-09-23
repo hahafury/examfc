@@ -5,6 +5,8 @@ const userQueries = require('./queries/userQueries');
 const controller = require('../socketInit');
 const UtilFunctions = require('../utils/functions');
 const CONSTANTS = require('../constants');
+const bankQueries = require('./queries/bankQueries');
+const moment = require('moment');
 
 module.exports.dataForContest = async (req, res, next) => {
   const response = {};
@@ -36,10 +38,11 @@ module.exports.dataForContest = async (req, res, next) => {
   }
 };
 
+
 module.exports.getContestById = async (req, res, next) => {
   try {
     let contestInfo = await db.Contests.findOne({
-      where: { id: req.headers.contestid },
+      where: { id: req.headers.contestid},
       order: [
         [db.Offers, 'id', 'asc'],
       ],
@@ -160,7 +163,6 @@ const resolveOffer = async (
             WHEN "id"=${ contestId }  AND "orderId"='${ orderId }' THEN '${ CONSTANTS.CONTEST_STATUS_FINISHED }'
             WHEN "orderId"='${ orderId }' AND "priority"=${ priority +
     1 }  THEN '${ CONSTANTS.CONTEST_STATUS_ACTIVE }'
-            ELSE '${ CONSTANTS.CONTEST_STATUS_PENDING }'
             END
     `),
   }, { orderId }, transaction);
@@ -215,6 +217,61 @@ module.exports.setOfferStatus = async (req, res, next) => {
   }
 };
 
+module.exports.resolveOrRejectContest = async (req, res, next) => {
+  let transaction;
+    if(req.body.verdict === CONSTANTS.MODERATION_VERDICT_REJECT){
+      try {
+        const checkActiveContest = await db.Contests.findAll({
+          where: {
+            status: CONSTANTS.CONTEST_STATUS_ACTIVE,
+          },
+          include: [
+            {
+              model: db.Users,
+              where: {
+                id: req.body.contestOwner,
+              },
+              attributes: [],
+            },
+          ],
+        });
+        if(checkActiveContest.length == 0){
+          await contestQueries.updateContestStatus({status: CONSTANTS.CONTEST_STATUS_ACTIVE, createdAt: moment().format('YYYY-MM-DD HH:mm')}, {id: req.body.id}, null);
+        } else{
+          await contestQueries.updateContestStatus({status: CONSTANTS.CONTEST_STATUS_PENDING, createdAt: moment().format('YYYY-MM-DD HH:mm')}, {id: req.body.id}, null);
+        };
+        next();
+      } catch (error) {
+        next(new ServerError());
+      }
+    } else if(req.body.verdict === CONSTANTS.MODERATION_VERDICT_REJECT){
+      try {
+        transaction = await db.sequelize.transaction();
+        const rejectContest = await db.Contests.findByPk(req.body.id);
+        const rejectContestBank = await db.Banks.findAll({
+            where: { 
+              name: 'yriy',
+            },
+          },
+        );
+        const squadhelpBank = await db.Banks.findAll({
+          where: { 
+            name: 'SquadHelp',
+          }
+        });
+        await bankQueries.updateBankBalance({balance: parseInt(rejectContestBank[0].dataValues.balance) + parseInt(rejectContest.prize)}, {name: 'yriy'}, transaction);
+        await bankQueries.updateBankBalance({balance: parseInt(squadhelpBank[0].dataValues.balance) - parseInt(rejectContest.prize)}, {name: 'SquadHelp'}, transaction);
+        await contestQueries.deleteContest({id: rejectContest.id},transaction);
+        transaction.commit();
+        contestQueries.deleteContest(req.body.id);
+        next();
+      } catch (e) {
+        transaction.rollback();
+        return next(new ServerError());
+      }
+    };
+};
+
 module.exports.getCustomersContests = (req, res, next) => {
   db.Contests.findAll({
     where: { status: req.headers.status, userId: req.tokenData.userId },
@@ -243,7 +300,8 @@ module.exports.getCustomersContests = (req, res, next) => {
 
 module.exports.getContests = (req, res, next) => {
   const predicates = UtilFunctions.createWhereForAllContests(req.body.typeIndex,
-    req.body.contestId, req.body.industry, req.body.awardSort);
+    req.body.contestId, req.body.industry, req.body.awardSort, req.body.userRole);
+  console.log(predicates);
   db.Contests.findAll({
     where: predicates.where,
     order: predicates.order,
@@ -271,3 +329,5 @@ module.exports.getContests = (req, res, next) => {
       next(new ServerError());
     });
 };
+
+

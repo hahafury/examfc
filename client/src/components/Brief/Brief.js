@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { updateContest, changeEditContest, clearUpdateContestStore } from '../../actions/actionCreator';
+import { updateContest, changeEditContest, clearUpdateContestStore} from '../../actions/actionCreator';
 import ContestForm from '../ContestForm/ContestForm';
 import styles from './Brief.module.sass';
 import ContestInfo from '../Contest/ContestInfo/ContestInfo';
@@ -33,6 +33,7 @@ const Brief = (props) => {
       typeOfTagline,
       originalFileName,
       contestType,
+      id,
     } = props.contestData;
     const data = {
       focusOfWork,
@@ -46,6 +47,7 @@ const Brief = (props) => {
       typeOfTagline,
       originalFileName,
       contestType,
+      id
     };
     const defaultData = {};
     Object.keys(data).forEach((key) => {

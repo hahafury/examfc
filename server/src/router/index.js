@@ -10,6 +10,7 @@ const upload = require('../utils/fileUpload');
 const router = express.Router();
 const eventsController = require('../controllers/eventsController');
 const sendRecoveryToken = require('../middlewares/sendRecoveryToken');
+const sendModerationVerdict = require('../middlewares/sendModerationResponse');
 
 //-----Events
 
@@ -41,6 +42,14 @@ router.post(
   '/changePassword',
   checkToken.checkRecoveryToken,
   userController.changePassword,
+);
+
+//-----Moderation contests
+
+router.post(
+  '/moderationVerdict',
+  contestController.resolveOrRejectContest,
+  sendModerationVerdict,
 );
 
 router.post(
@@ -92,6 +101,12 @@ router.post(
   basicMiddlewares.onlyForCreative,
   contestController.getContests,
 );
+
+router.get(
+  '/getUnverifiedContests',
+  checkToken.checkToken,
+  basicMiddlewares.onlyForModerator,
+)
 
 router.post(
   '/getUser',

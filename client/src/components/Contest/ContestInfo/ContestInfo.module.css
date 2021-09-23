@@ -165,4 +165,8 @@
 .dataContainer .file:hover {
   color: #6b89b0;
 }
+
+.decision i:hover{
+  cursor: pointer;
+}
 /*# sourceMappingURL=ContestInfo.module.css.map */

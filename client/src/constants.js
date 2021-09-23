@@ -4,9 +4,13 @@ const serverPort = 3000;
 export default {
   CUSTOMER: 'customer',
   CREATOR: 'creator',
+  MODERATOR: 'moderator',
+  MODERATION_VERDICT_RESOLVE: 'resolve',
+  MODERATION_VERDICT_REJECT: 'reject',
   CONTEST_STATUS_ACTIVE: 'active',
   CONTEST_STATUS_FINISHED: 'finished',
   CONTEST_STATUS_PENDING: 'pending',
+  CONTEST_STATUS_CHECKING: 'checking',
   NAME_CONTEST: 'name',
   LOGO_CONTEST: 'logo',
   TAGLINE_CONTEST: 'tagline',

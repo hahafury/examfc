@@ -35,6 +35,14 @@ module.exports.canGetContest = async (req, res, next) => {
           },
         },
       });
+    } else if(req.tokenData.role === CONSTANTS.MODERATOR){
+      result = await bd.Contests.findOne({
+        where: {
+          id: req.headers.contestid,
+          status: CONSTANTS.CONTEST_STATUS_CHECKING,
+          },
+        },
+      );
     }
     result ? next() : next(new RightsError());
   } catch (e) {
@@ -48,12 +56,19 @@ module.exports.onlyForCreative = (req, res, next) => {
   } else {
     next();
   }
-
 };
 
 module.exports.onlyForCustomer = (req, res, next) => {
   if (req.tokenData.role === CONSTANTS.CREATOR) {
     return next(new RightsError('this page only for customers'));
+  } else {
+    next();
+  }
+};
+
+module.exports.onlyForModerator = (req, res, next) => {
+  if (req.tokenData.role === CONSTANTS.MODERATOR) {
+    return next(new RightsError('this page only for moderator'));
   } else {
     next();
   }

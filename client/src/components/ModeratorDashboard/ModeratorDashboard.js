@@ -2,7 +2,6 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
-import classNames from 'classnames';
 import isEqual from 'lodash/isEqual';
 import {
   getContestsForCreative,
@@ -12,13 +11,13 @@ import {
 } from '../../actions/actionCreator';
 import ContestsContainer from '../ContestsContainer/ContestsContainer';
 import ContestBox from '../ContestBox/ContestBox';
-import styles from './CreatorDashboard.module.sass';
+import styles from '../CreatorDashboard/CreatorDashboard.module.sass';
 import TryAgain from '../TryAgain/TryAgain';
-import CONSTANTS from '../../constants'
+import CONSTANTS from '../../constants';
 
 const types = ['', 'name,tagline,logo', 'name', 'tagline', 'logo', 'name,tagline', 'logo,tagline', 'name,logo'];
 
-class CreatorDashboard extends React.Component {
+class ModeratorDashboard extends React.Component {
     renderSelectType = () => {
       const array = [];
       const { creatorFilter } = this.props;
@@ -72,7 +71,7 @@ class CreatorDashboard extends React.Component {
       this.props.getContests({
         limit: 8,
         offset: 0,
-        userRole: CONSTANTS.CREATOR,
+        userRole: CONSTANTS.MODERATOR,
         ...filter,
       });
     };
@@ -124,6 +123,7 @@ class CreatorDashboard extends React.Component {
       this.props.getContests({
         limit: 8,
         offset: startFrom,
+        userRole: CONSTANTS.MODERATOR,
         ...this.getPredicateOfRequest(),
       });
     };
@@ -158,13 +158,6 @@ class CreatorDashboard extends React.Component {
           <div className={styles.filterContainer}>
             <span className={styles.headerFilter}>Filter Results</span>
             <div className={styles.inputsContainer}>
-              <div
-                onClick={() => this.changePredicate({ name: 'ownEntries', value: !creatorFilter.ownEntries })}
-                className={classNames(styles.myEntries, { [styles.activeMyEntries]: creatorFilter.ownEntries })}
-              >
-                My
-                Entries
-              </div>
               <div className={styles.inputContainer}>
                 <span>By contest type</span>
                 {this.renderSelectType()}
@@ -239,4 +232,4 @@ const mapDispatchToProps = (dispatch) => ({
   getDataForContest: () => dispatch(getDataForContest()),
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CreatorDashboard));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ModeratorDashboard));

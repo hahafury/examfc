@@ -1,4 +1,3 @@
-const { db } = require('../models/mongoModels/conversation');
 const { Events } = require('./../models');
 const { Users } = require('./../models');
 
@@ -45,7 +44,6 @@ module.exports.deleteEventById = async (req, res, next) => {
   const {
     params: { id },
   } = req;
-  console.log(id);
   try {
     const foundEvent = await Events.destroy({
       where: {

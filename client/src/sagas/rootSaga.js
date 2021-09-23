@@ -28,12 +28,18 @@ import {
   changeCatalogName,
 } from './chatSagas';
 import { createEvent } from './eventSagas';
-import * as recoverySaga from './recoverySagas';
+import { recoverySaga, changePassword } from './recoverySagas';
+import { moderationVerdictSaga } from './moderationContestsSagas';
 
 function* rootSaga() {
+  //-----Moderation contests
+  yield takeLatest(ACTION.MODERATION_CONTEST_VERDICT, moderationVerdictSaga);
+  //-----Events
   yield takeLatest(ACTION.CREATE_EVENT, createEvent);
-  yield takeLeading(ACTION.RECOVERY_PASSWORD, recoverySaga.recoverySaga);
-  yield takeLeading(ACTION.CHANGE_PASSWORD, recoverySaga.changePassword);
+  //-----Recovery password
+  yield takeLeading(ACTION.RECOVERY_PASSWORD, recoverySaga);
+  yield takeLeading(ACTION.CHANGE_PASSWORD, changePassword);
+  
   yield takeLatest(ACTION.AUTH_ACTION_REGISTER, registerSaga);
   yield takeLatest(ACTION.AUTH_ACTION_LOGIN, loginSaga);
   yield takeLatest(ACTION.PAYMENT_ACTION, paymentSaga);

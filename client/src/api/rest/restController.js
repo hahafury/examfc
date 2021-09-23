@@ -6,6 +6,8 @@ export const createEvent = (data) => http.post('events/create', data);
 //-----Recovery password
 export const recoveryPasswordRequest = (data) => http.post('recoveryRequest', data);
 export const changePassword = (data) => http.post('changePassword', data);
+//-----Moderation
+export const moderationVerdict = (data) => http.post('moderationVerdict', data);
 
 export const registerRequest = (data) => http.post('registration', data);
 export const loginRequest = (data) => http.post('login', data);
@@ -37,9 +39,9 @@ export const getCustomersContests = (data) => http.post('getCustomersContests', 
 });
 
 export const getActiveContests = ({
-  offset, limit, typeIndex, contestId, industry, awardSort, ownEntries,
+  offset, limit, typeIndex, contestId, industry, awardSort, ownEntries, userRole
 }) => http.post('getAllContests', {
-  offset, limit, typeIndex, contestId, industry, awardSort, ownEntries,
+  offset, limit, typeIndex, contestId, industry, awardSort, ownEntries, userRole
 });
 
 export const getContestById = (data) => http.get('getContestById', {

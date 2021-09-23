@@ -12,8 +12,10 @@ import chatReducer from './chatReducer';
 import userProfileReducer from './userProfileReducer';
 import eventsReducer from './eventsReducer';
 import recoveryReducer from './recoveryReducer';
+import moderationContestsReducer from './moderationContestsReducer';
 
 const appReducer = combineReducers({
+  moderationContests: moderationContestsReducer,
   recovery: recoveryReducer,
   eventsReducer: eventsReducer,
   userStore: getUserReducer,
