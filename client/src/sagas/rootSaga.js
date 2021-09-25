@@ -33,7 +33,7 @@ import { moderationVerdictSaga } from './moderationContestsSagas';
 
 function* rootSaga() {
   //-----Moderation contests
-  yield takeLatest(ACTION.MODERATION_CONTEST_VERDICT, moderationVerdictSaga);
+  yield takeLeading(ACTION.MODERATION_CONTEST_VERDICT, moderationVerdictSaga);
   //-----Events
   yield takeLatest(ACTION.CREATE_EVENT, createEvent);
   //-----Recovery password

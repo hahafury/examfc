@@ -1,0 +1,323 @@
+p {
+  color: #77838f;
+  line-height: 1.7;
+}
+
+hr {
+  border: 1px solid #77838f;
+  margin: 0;
+}
+
+.howItWorksButton {
+  margin-bottom: 4rem;
+}
+
+.howItWorksButton a {
+  background-color: #377dff;
+  border-color: #377dff;
+  border-radius: 6.1875rem;
+  padding: 15px 20px;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: inline-block;
+}
+
+.howItWorksButton a:hover {
+  -webkit-box-shadow: 0 4px 11px #377dff4f;
+          box-shadow: 0 4px 11px #377dff4f;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  transition: -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+  -webkit-transition: margin-bottom 0.25s;
+  transition: margin-bottom 0.25s;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.howItWorksButton a small {
+  margin-right: 5px;
+}
+
+.howItWorksButton a .blueVid {
+  background-color: white;
+}
+
+.wrap {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.main {
+  margin-top: 4rem;
+}
+
+.main .wrap:nth-child(2) {
+  padding: 128px 15px;
+}
+
+.main div {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.main .howDoesSquadhelpWork {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  height: 362px;
+}
+
+.main .howDoesSquadhelpWork .leftContainer {
+  max-width: 58.3%;
+  padding: 0px 15px;
+}
+
+.main .howDoesSquadhelpWork .leftContainer span {
+  color: #377dff;
+  padding: 7px 15px;
+  background: rgba(55, 125, 255, 0.1);
+  margin: 0px 0px 16px;
+  font-size: .6875rem;
+  border-radius: 6.1875rem;
+}
+
+.main .howDoesSquadhelpWork .leftContainer div h1 {
+  color: #1e2022;
+  font-size: 40px;
+  margin: 16px 0px 16px;
+  font-weight: 600;
+}
+
+.main .howDoesSquadhelpWork .leftContainer div p {
+  margin: 0px 0px 16px;
+}
+
+.main .howDoesSquadhelpWork .rightContainer {
+  width: 41.7%;
+  background-image: url(https://i.imgur.com/aKc9D6P.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.main .howDoesSquadhelpWork .rightContainer img {
+  width: 386px;
+}
+
+.main .sectionHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 111px 64px;
+}
+
+.main .sectionHeader img {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 16px;
+}
+
+.main .sectionHeader span {
+  color: #377dff;
+  padding: 7px 15px;
+  background: rgba(55, 125, 255, 0.1);
+  margin: 0px 0px 16px;
+  font-size: .6875rem;
+  border-radius: 6.1875rem;
+}
+
+.main .sectionHeader h1 {
+  font-size: 32px;
+  margin: 0px 0px 8px;
+  color: #1E2022;
+}
+
+.main .sectionHeader p {
+  margin-top: 16px;
+}
+
+.main .servicesContainer {
+  max-width: 1140px;
+}
+
+.main .servicesContainer .cardDeck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.main .servicesContainer .cardDeck .cardBody + .cardBody {
+  margin-left: 15px;
+}
+
+.main .servicesContainer .cardDeck .cardBody {
+  padding: 64px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #8080802e;
+}
+
+.main .servicesContainer .cardDeck .cardBody .cardInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 0px;
+  text-align: center;
+}
+
+.main .servicesContainer .cardDeck .cardBody .cardInfo img {
+  width: 72px;
+  height: 72px;
+}
+
+.main .servicesContainer .cardDeck .cardBody .cardInfo h3 {
+  font-size: 24px;
+  color: #1e2022;
+  margin: 16px 0px 8px;
+}
+
+.main .servicesContainer .cardDeck .cardBody .cardInfo p {
+  font-size: 16px;
+  color: #77878f;
+  margin: 16px 0px 16px;
+}
+
+.main .howDoNamingContestsWork {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main .howDoNamingContestsWorkContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main .howDoNamingContestsWorkContainer .listItem {
+  position: relative;
+  padding: 1rem 0rem 1rem 2.5rem;
+}
+
+.main .howDoNamingContestsWorkContainer .listItem::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -0.25rem;
+  width: 2rem;
+  height: .0625rem;
+  border-top: 1px solid #e7eaf3;
+  margin: auto auto auto 0;
+  content: "";
+}
+
+.main .howDoNamingContestsWorkContainer .listItem::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -.3125rem;
+  width: .0625rem;
+  height: 100%;
+  border-right: 1px solid #e7eaf3;
+  margin: auto auto auto 0;
+  content: "";
+}
+
+.main .howDoNamingContestsWorkContainer .listItem .listItemWrapper {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.3125rem;
+  border: 1px solid #e7eaf3;
+}
+
+.main .howDoNamingContestsWorkContainer .listItem .listItemWrapper div {
+  padding: 0;
+}
+
+.main .howDoNamingContestsWorkContainer .listItem .listItemWrapper .numberOfItem {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  color: #377dff;
+  margin-right: 2rem;
+}
+
+.main .howDoNamingContestsWorkContainer .listItem .listItemWrapper .listItemInfo {
+  color: #77838f;
+  font-size: 16px;
+  line-height: 1.7;
+}
+/*# sourceMappingURL=HowItWorks.module.css.map */

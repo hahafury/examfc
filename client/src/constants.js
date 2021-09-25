@@ -33,6 +33,7 @@ export default {
   CREATE_NEW_CATALOG_AND_ADD_CHAT: 'CREATE_NEW_CATALOG_AND_ADD_CHAT',
   USER_INFO_MODE: 'USER_INFO_MODE',
   CASHOUT_MODE: 'CASHOUT_MODE',
+  TYPES: ['', 'name,tagline,logo', 'name', 'tagline', 'logo', 'name,tagline', 'logo,tagline', 'name,logo'],
   //-----Events
   EVENTS_INFO_MODE: 'EVENTS_INFO_MODE',
   EVENTS_CREATE_MODE: 'EVENTS_CREATE_MODE',

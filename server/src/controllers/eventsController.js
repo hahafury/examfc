@@ -1,12 +1,15 @@
 const { Events } = require('./../models');
 const { Users } = require('./../models');
+const { eventNotification } = require('../utils/cron');
 
 
 module.exports.create = async (req, res, next) => {
   const { body } = req;
+  console.log(body)
   try {
     const createdEvent = await Events.create(body);
     if (createdEvent) {
+      //eventNotification(req.body.userId, req.body.eventNotification, req.body.eventInfo);
       return res.status(201).send({ data: createdEvent });
     }
     res.status(400).send('Bad request');

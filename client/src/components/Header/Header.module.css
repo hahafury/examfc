@@ -24,10 +24,21 @@
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #ebebeb;
+  padding-bottom: 13px;
+}
+
+@media (min-width: 1200px) {
+  .headerContainer .navContainer {
+    max-width: 1140px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 @media (max-width: 920px) {
   .headerContainer .navContainer {
+    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -62,12 +73,26 @@
   border-radius: 5px;
   font-size: 14px;
   font-weight: 400;
-  margin-bottom: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .headerContainer .navContainer .startContestBtn:hover {
+  cursor: pointer;
   color: white;
   background-color: #28d2d0;
+  margin-bottom: 5px;
+  -webkit-box-shadow: 0 4px 11px #377dff4f;
+          box-shadow: 0 4px 11px #377dff4f;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  transition: -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+  -webkit-transition: margin-bottom 0.25s;
+  transition: margin-bottom 0.25s;
 }
 
 .headerContainer .navContainer .leftNav {
@@ -148,6 +173,10 @@
     width: 100%;
     padding: 0 15px;
   }
+}
+
+.headerContainer .navContainer .leftNav .nav ul li:hover {
+  cursor: pointer;
 }
 
 .headerContainer .navContainer .leftNav .nav ul li:hover span {
@@ -303,6 +332,8 @@
   background: white;
   width: 180px;
   display: none;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .headerContainer .loginSignnUpHeaders .userButtonsContainer .userInfo ul li {
@@ -318,6 +349,10 @@
   padding: 5px 15px;
   color: #333;
   font-size: 16px;
+}
+
+.headerContainer .loginSignnUpHeaders .userButtonsContainer .userInfo ul li li {
+  cursor: pointer;
 }
 
 .headerContainer .loginSignnUpHeaders .userButtonsContainer .userInfo img {

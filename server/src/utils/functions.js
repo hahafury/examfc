@@ -1,4 +1,4 @@
-const bd = require('../models');
+const db = require('../models');
 const CONSTANTS = require('../constants');
 
 module.exports.createWhereForAllContests = (
@@ -34,7 +34,7 @@ module.exports.createWhereForAllContests = (
 };
 
 function getPredicateTypes (index) {
-  return { [ bd.Sequelize.Op.or ]: [types[ index ].split(',')] };
+  return { [ db.Sequelize.Op.or ]: [types[ index ].split(',')] };
 }
 
 const types = [

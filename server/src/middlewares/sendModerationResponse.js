@@ -5,7 +5,6 @@ const userQueries = require('../controllers/queries/userQueries');
 const contestQueries = require('../controllers/queries/contestQueries');
 
 module.exports = async (req, res, next) => {
-    console.log(req.body);
     const foundUser = await userQueries.findUser({ id: req.body.contestOwner });
     try {
         const transporter = nodemailer.createTransport({

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Field, Form, Formik } from 'formik';
 import { authActionLogin, clearAuth } from '../../actions/actionCreator';
@@ -7,29 +8,25 @@ import FormInput from '../FormInput/FormInput';
 import Schems from '../../validators/validationSchems';
 import Error from '../Error/Error';
 
-class LoginForm extends React.Component {
-  componentWillUnmount() {
-    this.props.authClear();
-  }
+const LoginForm = (props) => {
 
-    clicked = (values) => {
-      this.props.loginRequest({ data: values, history: this.props.history });
-    };
+  const clicked = (values) => {
+    props.loginRequest({ data: values, history: props.history });
+  };
 
-    render() {
-      const { error, isFetching } = this.props.auth;
-      const { submitting, authClear } = this.props;
+  const { error, isFetching } = props.auth;
+  const { submitting, authClear } = props;
 
-      const formInputClasses = {
-        container: styles.inputContainer,
-        input: styles.input,
-        warning: styles.fieldWarning,
-        notValid: styles.notValid,
-        valid: styles.valid,
-      };
+  const formInputClasses = {
+    container: styles.inputContainer,
+    input: styles.input,
+    warning: styles.fieldWarning,
+    notValid: styles.notValid,
+    valid: styles.valid,
+  };
 
-      return (
-        <div className={styles.loginForm}>
+  return (
+    <div className={styles.loginForm}>
           {error && (
           <Error
             data={error.data}
@@ -43,7 +40,7 @@ class LoginForm extends React.Component {
               email: '',
               password: '',
             }}
-            onSubmit={this.clicked}
+            onSubmit={clicked}
             validationSchema={Schems.LoginSchem}
           >
             <Form>
@@ -73,9 +70,8 @@ class LoginForm extends React.Component {
             </Form>
           </Formik>
         </div>
-      );
-    }
-}
+  );
+};
 
 const mapStateToProps = (state) => {
   const { auth } = state;

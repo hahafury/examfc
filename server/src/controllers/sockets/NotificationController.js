@@ -15,6 +15,11 @@ class NotificationController extends WebSocket{
     this.io.to(target).emit(CONSTANTS.NOTIFICATION_CHANGE_OFFER_STATUS,
       { message, contestId });
   }
+
+  /*emitEventNotification (target, message) {
+    this.io.to(target).emit(CONSTANTS.EVENT_NOTIFICATION,
+        { message });
+  }*/
 }
 
 module.exports = NotificationController;

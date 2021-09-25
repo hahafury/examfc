@@ -92,6 +92,7 @@
   font-size: 44px;
   -webkit-transition: font-size 0.2s;
   transition: font-size 0.2s;
+  cursor: pointer;
 }
 
 .mainContestInfoContainer .infoContainer .contestTypeContainer .editBtn {

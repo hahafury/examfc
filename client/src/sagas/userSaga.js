@@ -28,6 +28,7 @@ export function* notAuthorizeSaga(action) {
 export function* updateUserData(action) {
   try {
     const { data } = yield restController.updateUser(action.data);
+    console.log(action);
     yield put({ type: ACTION.UPDATE_USER_DATA_SUCCESS, data });
     yield put({ type: ACTION.CHANGE_EDIT_MODE_ON_USER_PROFILE, data: false });
   } catch (e) {

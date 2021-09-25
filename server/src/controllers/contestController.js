@@ -219,7 +219,7 @@ module.exports.setOfferStatus = async (req, res, next) => {
 
 module.exports.resolveOrRejectContest = async (req, res, next) => {
   let transaction;
-    if(req.body.verdict === CONSTANTS.MODERATION_VERDICT_REJECT){
+    if(req.body.verdict === CONSTANTS.MODERATION_VERDICT_RESOLVE){
       try {
         const checkActiveContest = await db.Contests.findAll({
           where: {

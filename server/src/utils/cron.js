@@ -2,8 +2,10 @@ const path = require('path');
 const errorLogPath = path.join(__dirname, '..', 'logs/error.json');
 const moment = require('moment');
 const fs = require('fs');
+const controller = require('../socketInit');
+const cronJob = require('cron').CronJob;
 
-module.exports = async () => {
+module.exports.toNewLogFunction = async () => {
     try {
       const fileContent = JSON.parse(fs.readFileSync(errorLogPath), "utf8");
       const newLogFilName = `${moment().format('MMMM-Do-YYYY-h-mm-ss')}`;
@@ -31,4 +33,11 @@ module.exports = async () => {
         console.log('--------------------------------------------');
     }
 };
+
+/*module.exports.eventNotification = async (userId, eventNotificationTime, eventInfo) => {
+  new cronJob(eventNotificationTime, () => {
+    controller.getNotificationController().emitEventNotification(userId
+      `Event ${eventInfo} is coming soon`);
+  }).start();
+};*/
 

@@ -12,7 +12,12 @@
     justify-content: space-around
     align-items: center
     border-bottom: 1px solid #ebebeb
+    padding-bottom: 13px
+    @media(min-width: 1200px)
+      max-width: 1140px
+      justify-content: space-between
     @media(max-width: 920px)
+      width: 100%
       justify-content: center
     @media(max-width: 700px)
       justify-content: flex-start
@@ -31,11 +36,17 @@
       border-radius: 5px
       font-size: 14px
       font-weight: 400
-      margin-bottom: 10px
+      align-self: center
+      transition: 0.25s 
 
       &:hover
+        cursor: pointer
         color: white
         background-color: #28d2d0
+        margin-bottom: 5px
+        box-shadow: 0 4px 11px #377dff4f
+        transition: box-shadow 0.25s
+        transition: margin-bottom 0.25s
 
     .leftNav
       display: flex
@@ -72,6 +83,8 @@
               padding: 0 15px
 
             &:hover
+              cursor: pointer
+
               span
                 color: #f27e51
 
@@ -170,6 +183,7 @@
           background: white
           width: 180px
           display: none
+          transition: 1s
 
           li
             text-align: left
@@ -182,6 +196,9 @@
               padding: 5px 15px
               color: #333
               font-size: 16px
+            
+            li
+              cursor: pointer
 
         img
           width: 20px

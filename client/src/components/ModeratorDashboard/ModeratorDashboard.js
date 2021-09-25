@@ -78,6 +78,7 @@ class ModeratorDashboard extends React.Component {
 
     changePredicate = ({ name, value }) => {
       const { creatorFilter } = this.props;
+      console.log(creatorFilter);
       this.props.newFilter({ [name]: value === 'Choose industry' ? null : value });
       this.parseParamsToUrl({ ...creatorFilter, ...{ [name]: value === 'Choose industry' ? null : value } });
     };

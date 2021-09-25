@@ -69,8 +69,7 @@ const mapStateToProps = (state) => {
   return { contestStore, bundleStore };
 };
 
-const mapDispatchToProps = (dispatch) => (
-  {
+const mapDispatchToProps = (dispatch) => ({
     saveContest: (data) => dispatch(saveContestToStore(data)),
     clearDataForContest: () => dispatch(clearDataForContest()),
   }

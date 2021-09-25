@@ -9,6 +9,8 @@ import { changeEventsModeView } from '../../actions/actionCreator'
 import classNames from 'classnames';
 import {getAllEvents} from '../../api/rest/restController';
 import jwt_decode from 'jwt-decode';
+import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
+import Footer from '../../components/Footer/Footer';
 
 const Events = (props) => {
     
@@ -17,8 +19,8 @@ const Events = (props) => {
     } = props;
 
     getAllEvents({userId: jwt_decode(localStorage.getItem("accessToken")).userId})
-            .then(data => {
-              localStorage.setItem('events',JSON.stringify(data.data.data));
+        .then(data => {
+            localStorage.setItem('events',JSON.stringify(data.data.data));
     });
 
     return(
@@ -44,6 +46,8 @@ const Events = (props) => {
                 </div>
                 {eventsModeView === CONSTANTS.EVENTS_INFO_MODE ? <EventContainer/> : <EventCreateForm/>}
             </div>
+            <ButtonGroup/>
+            <Footer/>
         </>
     );
 

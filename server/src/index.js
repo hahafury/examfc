@@ -5,7 +5,7 @@ require('./dbMongo/mongoose');
 const router = require('./router');
 const controller = require('./socketInit');
 const handlerError = require('./handlerError/handler');
-const toNewLogFunction = require('./utils/cron.js')
+const { toNewLogFunction } = require('./utils/cron.js')
 const cronJob = require('cron').CronJob;
 
 const PORT = process.env.PORT || 3000;

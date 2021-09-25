@@ -1,0 +1,428 @@
+*
+  box-size: border-box
+  
+p
+  color: #77838f
+  line-height: 1.7
+
+hr
+  border: 1px solid #8080802e
+  margin: 0
+    
+.howItWorksButton
+  margin-bottom: 4rem
+  @media screen and (max-width: 768px)
+    margin-top: 2rem
+
+  a
+      background-color: #377dff
+      border-color: #377dff
+      border-radius: 6.1875rem
+      padding: 15px 20px
+      color: white
+      transition: 0.5s
+      display: inline-block
+  
+      &:hover
+          box-shadow: 0 4px 11px #377dff4f
+          transition: box-shadow 0.25s
+          transition: margin-bottom 0.25s
+          cursor: pointer
+          transition: 0.5s
+
+      small
+          margin-right: 5px
+
+      .blueVid
+          background-color: white
+
+.wrap
+  width: 80%
+  margin: 0 auto  
+
+
+.main
+  margin-top: 4rem
+
+  .wrap
+  
+      &:nth-child(2)
+          padding: 128px 15px    
+
+  .howDoesSquadhelpWork
+      display: flex
+      flex-direction: row
+      margin: 0 auto
+      height: 362px
+      padding-top: 2rem
+      padding-bottom: 1rem
+
+      .leftContainer
+          max-width: 58.3%
+          padding: 0px 15px
+          @media screen and (max-width: 1024px)
+            max-width: inherit
+
+          span
+              color: #377dff
+              padding: 7px 15px
+              background: rgba(55,125,255,.1)
+              margin: 0px 0px 16px
+              font-size: .6875rem
+              border-radius: 6.1875rem
+
+          div
+
+              h1
+                  color: #1e2022
+                  font-size: 40px
+                  margin: 16px 0px 16px
+                  font-weight: 600
+
+              p
+                  margin: 0px 0px 16px
+
+      .rightContainer
+          width: 41.7%
+          background-image: url(https://i.imgur.com/aKc9D6P.png)   
+          display: flex
+          justify-content: center
+          padding: 0px
+          height: fit-content
+          @media screen and (max-width: 1024px)
+            display: none
+
+          img
+              width: 386px
+
+  .sectionHeader
+      padding-top: 2rem
+      padding-bottom: 1rem
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      margin: 0px 111px 64px
+      @media screen and (max-width: 768px)
+        margin: 0px 0px 64px
+
+      img
+          width: 72px
+          height: 72px
+          margin-bottom: 16px
+
+      span
+          color: #377dff
+          padding: 7px 15px
+          background: rgba(55,125,255,.1)
+          margin: 0px 0px 16px
+          font-size: .6875rem
+          border-radius: 6.1875rem
+
+      h1 
+          font-size: 32px
+          margin: 0px 0px 8px
+          color: #1E2022
+      
+      p
+          margin-top: 16px
+
+  .servicesContainer
+      max-width: 100%
+      
+      .cardDeck
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          padding-top: 0px
+          padding-bottom: 0px
+          @media screen and (max-width: 768px)
+            flex-direction: column
+
+          .cardBody + .cardBody
+              margin-left: 15px
+              @media screen and (max-width: 768px)
+                margin-left: 0px
+
+          .cardBody
+              padding: 64px 16px
+              display: flex
+              flex-direction: column
+              justify-content: center
+              align-items: center
+              border: 1px solid #8080802e
+
+              .cardInfo
+                  display: flex
+                  flex-direction: column
+                  justify-content: space-between
+                  align-items: center
+                  padding-top: 0px
+                  text-align: center
+
+
+                  img
+                      width: 72px
+                      height: 72px 
+                  
+                  h3
+                      font-size: 24px
+                      color: #1e2022
+                      margin: 16px 0px 8px
+
+                  p
+                      font-size: 16px
+                      color: #77878f
+                      margin: 16px 0px 16px
+                
+  .howDoNamingContestsWork
+      padding-top: 2rem
+      padding-bottom: 1rem
+      display: flex
+      flex-direction: row
+
+  .howDoNamingContestsWorkContainer
+    display: flex
+    flex-direction: row
+    @media screen and (max-width: 768px)
+      flex-direction: column-reverse
+      align-items: center
+
+    .listItem
+      position: relative
+      padding: 1rem 0rem 1rem 2.5rem
+
+      &::before
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: -0.25rem
+        width: 2rem
+        height: .0625rem
+        border-top: 1px solid #e7eaf3
+        margin: auto auto auto 0
+        content: ""
+
+      &::after
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: -.3125rem
+        width: .0625rem
+        height: 100%
+        border-right: 1px solid #e7eaf3
+        margin: auto auto auto 0
+        content: ""
+
+      &:first-child
+        
+        &::after
+          height: 50%
+          top: auto
+
+      &:last-child
+        
+        &::after
+          height: 50%
+          bottom: auto
+        
+
+      .listItemWrapper
+        padding: 2rem
+        display: flex
+        flex-direction: row
+        align-items: center
+        border-radius: 0.3125rem
+        border: 1px solid #e7eaf3
+
+        div
+          padding: 0
+
+        .numberOfItem
+          font-size: 3.5rem
+          line-height: 1.2
+          color: #377dff
+          margin-right: 2rem
+
+        .listItemInfo
+          color: #77838f
+          font-size: 16px
+          line-height: 1.7
+
+  .sticky
+    display: flex
+    flex-direction: row
+    @media screen and (max-width: 768px)
+      flex-direction: column
+
+    .stickyBlock
+      background-color: #377dff
+      border-radius: 0.35rem
+      position: sticky
+      top: 3rem
+      height: 244px
+      min-width: 250px
+      display: flex
+      margin-right: 2rem
+      @media screen and (max-width: 768px)
+        margin-bottom: 3rem
+        position: static
+
+      ul
+        list-style: none
+        padding: 1rem 2rem
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        li
+          padding-top: 1rem
+          padding-bottom: 1rem
+          color: #ffffffb3
+          text-decoration: none
+          font-size: 1rem
+          font-weight: 400  
+
+          &:hover
+            color: white
+            cursor: pointer   
+
+    .stickyInfo
+      display: flex
+      flex-direction: column
+
+      .stickyInfoBlock + .stickyInfoBlock
+        padding-top: 4rem
+        padding-bottom: 4rem
+        
+      h2
+        font-weight: 600
+        color: #377dff
+        font-size: 1.75rem
+        margin-bottom: 1rem
+
+  .readyToGetContest
+    background-image: linear-gradient(150deg,#2d1582 0%,#19a0ff 100%)
+    background-repeat: repeat-x
+    height: 220px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    text-align: center
+    @media screen and (max-width: 768px)
+      padding: 1rem 1rem
+      text-align: center
+
+    h2
+      color: #00dffc!important
+      font-weight: 600
+      margin-bottom: 1rem
+      font-size: 2rem
+    
+    p
+      color: #fff
+      margin-bottom: 1.5rem
+      font-size: 1.25rem
+      font-weight: 300
+      line-height: 1.7
+
+    button
+      background-color: #fff
+      border-color: #fff
+      cursor: pointer
+      transition: bottom 1s ease-in-out
+      color: black
+      border-radius: 0.35rem
+      height: 50px
+      width: 155px
+      padding: 0.75rem 1rem
+      border: 1px solid transparent
+      position: relative
+
+      &:hover
+        bottom: 0.35rem
+        box-shadow: 0px 25px 61px -33px rgba(255,255,255,1)
+
+  .statsContainer
+    display: flex
+    flex-direction: row
+    align-items: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+      
+    .statsItem
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      padding-left: 3rem
+      padding-right: 3rem
+      @media screen and (max-width: 768px)
+        margin-bottom: 3rem
+        margin-top: 1rem
+
+      img
+        width: 80px
+        height: 80px
+        margin-bottom: 1rem
+
+      p
+        color: #77838f
+        line-height: 1.7
+        text-align: center
+        max-width: 350px
+
+      strong
+        font-weight: bold
+        color: black
+
+
+    .statsItem 
+      
+      &:nth-child(1)
+        
+        &::after
+          position: absolute
+          right: -.9375rem
+          top: 50%
+          height: 4rem
+          border-left: 1px solid rgba(30,32,34,.2)
+          content: ""
+          margin-top: -2rem
+          -webkit-transform: rotate(15deg)
+          transform: rotate(15deg)
+          @media screen and ( max-width: 768px )
+            display: none
+
+      &:nth-child(2)
+        
+        &::after
+          position: absolute
+          right: -.9375rem
+          top: 50%
+          height: 4rem
+          border-left: 1px solid rgba(30,32,34,.2)
+          content: ""
+          margin-top: -2rem
+          -webkit-transform: rotate(15deg)
+          transform: rotate(15deg)
+          @media screen and ( max-width: 768px )
+            display: none
+
+  .featuredIn
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    .featuredInItem
+
+      h2
+        font-size: 1.75rem
+        font-weight: 300
+        line-height: 1.5
+
