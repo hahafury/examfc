@@ -5,7 +5,6 @@ const { eventNotification } = require('../utils/cron');
 
 module.exports.create = async (req, res, next) => {
   const { body } = req;
-  console.log(body)
   try {
     const createdEvent = await Events.create(body);
     if (createdEvent) {
