@@ -27,10 +27,21 @@ fs
 db[ 'Events' ].belongsTo(db[ 'Users' ],
   { foreignKey: 'eventOwner', sourceKey: 'id' });
 
+db[ 'Conversations' ].hasMany(db['Catalogs'],
+  { foreignKey: 'chats', sourceKey: 'id'}
+);
+db[ 'Conversations' ].hasMany(db['Messages'],
+  { foreignKey: 'conversation', sourceKey: 'participants'}
+);
+db[ 'Messages' ].belongsTo(db[ 'Conversations'],
+  { foreignKey: 'conversation', sourceKey: 'participants'}
+);
+
 db[ 'Contests' ].belongsTo(db[ 'Users' ],
   { foreignKey: 'userId', sourceKey: 'id' });
 db[ 'Contests' ].hasMany(db[ 'Offers' ],
   { foreignKey: 'contestId', targetKey: 'id' });
+
 
 db[ 'Users' ].hasMany(db[ 'Offers' ],
   { foreignKey: 'userId', targetKey: 'id' });
@@ -38,6 +49,9 @@ db[ 'Users' ].hasMany(db[ 'Contests' ],
   { foreignKey: 'userId', targetKey: 'id' });
 db[ 'Users' ].hasMany(db[ 'Ratings' ],
   { foreignKey: 'userId', targetKey: 'id' });
+
+db[ 'Users' ].hasMany(db[ 'Messages' ],
+  { foreignKey: 'id', targetKey: 'id' });
 
 db[ 'Offers' ].belongsTo(db[ 'Users' ],
   { foreignKey: 'userId', sourceKey: 'id' });

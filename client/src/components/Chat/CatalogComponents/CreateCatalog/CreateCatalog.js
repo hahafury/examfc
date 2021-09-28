@@ -10,6 +10,7 @@ const CreateCatalog = (props) => {
   const click = (values) => {
     const { createCatalog } = props;
     const { addChatId } = props;
+    console.log(props);
     createCatalog({ catalogName: values.catalogName, chatId: addChatId });
   };
   return (

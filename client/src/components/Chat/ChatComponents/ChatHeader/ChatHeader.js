@@ -6,6 +6,7 @@ import styles from './ChatHeader.module.sass';
 import CONSTANTS from '../../../../constants';
 
 const ChatHeader = (props) => {
+
   const changeFavorite = (data, event) => {
     props.changeChatFavorite(data);
     event.stopPropagation();

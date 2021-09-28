@@ -1,6 +1,6 @@
 import isEqual from 'lodash/isEqual';
 import WebSocket from './WebSocket';
-import CONTANTS from '../../../constants';
+import CONSTANTS from '../../../constants';
 import { addMessage, changeBlockStatusInStore } from '../../../actions/actionCreator';
 
 class ChatSocket extends WebSocket {
@@ -14,11 +14,11 @@ class ChatSocket extends WebSocket {
     };
 
     onChangeBlockStatus = () => {
-      this.socket.on(CONTANTS.CHANGE_BLOCK_STATUS, (data) => {
+      this.socket.on(CONSTANTS.CHANGE_BLOCK_STATUS, (data) => {
         const { message } = data;
         const { messagesPreview } = this.getState().chatStore;
         messagesPreview.forEach((preview) => {
-          if (isEqual(preview.participants, message.participants)) preview.blackList = message.blackList;
+          if (isEqual(preview.conversation.participants, message.Conversation.participants)) preview.Conversation.blackList = message.Conversation.blackList;
         });
         this.dispatch(changeBlockStatusInStore({ chatData: message, messagesPreview }));
       });

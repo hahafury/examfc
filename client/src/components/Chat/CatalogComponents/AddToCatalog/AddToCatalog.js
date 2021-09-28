@@ -19,15 +19,17 @@ const AddToCatalog = (props) => {
     const { catalogList } = props;
     const valueArray = [];
     catalogList.forEach((catalog) => {
-      valueArray.push(catalog._id);
+      valueArray.push(catalog.id);
     });
     return valueArray;
   };
 
   const click = (values) => {
+    console.log(values);
     const { addChatId } = props;
     props.addChatToCatalog({ chatId: addChatId, catalogId: values.catalogId });
   };
+  console.log(props);
 
   const selectArray = getCatalogsNames();
   return (

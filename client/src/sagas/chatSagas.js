@@ -60,8 +60,9 @@ export function* changeChatFavorite(action) {
   try {
     const { data } = yield restController.changeChatFavorite(action.data);
     const { messagesPreview } = yield select((state) => state.chatStore);
+    console.log(data)
     messagesPreview.forEach((preview) => {
-      if (isEqual(preview.participants, data.participants)) preview.favoriteList = data.favoriteList;
+      if (isEqual(preview.Conversation.participants, data.participants)) preview.Conversation.favoriteList = data.favoriteList;
     });
     yield put({ type: ACTION.CHANGE_CHAT_FAVORITE, data: { changedPreview: data, messagesPreview } });
   } catch (err) {
@@ -74,8 +75,9 @@ export function* changeChatBlock(action) {
     const { data } = yield restController.changeChatBlock(action.data);
     const { messagesPreview } = yield select((state) => state.chatStore);
     messagesPreview.forEach((preview) => {
-      if (isEqual(preview.participants, data.participants)) preview.blackList = data.blackList;
+      if (isEqual(preview.Conversation.participants, data.participants)) preview.Conversation.blackList = data.blackList;
     });
+    console.log(data);
     yield put({ type: ACTION.CHANGE_CHAT_BLOCK, data: { messagesPreview, chatData: data } });
   } catch (err) {
     yield put({ type: ACTION.SET_CHAT_BLOCK_ERROR, error: err.response });
@@ -101,6 +103,7 @@ export function* addChatToCatalog(action) {
         break;
       }
     }
+    console.log(catalogList)
     yield put({ type: ACTION.ADD_CHAT_TO_CATALOG, data: catalogList });
   } catch (err) {
     yield put({ type: ACTION.ADD_CHAT_TO_CATALOG_ERROR, error: err.response });
@@ -110,6 +113,7 @@ export function* addChatToCatalog(action) {
 export function* createCatalog(action) {
   try {
     const { data } = yield restController.createCatalog(action.data);
+    console.log(data)
     yield put({ type: ACTION.CREATE_CATALOG_SUCCESS, data });
   } catch (err) {
     yield put({ type: ACTION.CREATE_CATALOG_ERROR, error: err.response });

@@ -11,8 +11,8 @@ const CatalogListContainer = (props) => {
   },[]);
 
   const removeChatFromCatalog = (event, chatId) => {
-    const { _id } = props.chatStore.currentCatalog;
-    props.removeChatFromCatalog({ chatId, catalogId: _id });
+    const { id } = props.chatStore.currentCatalog;
+    props.removeChatFromCatalog({ chatId, catalogId: id });
     event.stopPropagation();
   };
 
@@ -22,7 +22,9 @@ const CatalogListContainer = (props) => {
     const dialogsInCatalog = [];
     for (let i = 0; i < messagesPreview.length; i++) {
       for (let j = 0; j < chats.length; j++) {
-        if (chats[j] === messagesPreview[i]._id) {
+        console.log(chats[j].conversation);
+        console.log(messagesPreview[j].conversation);
+        if (chats[j] === messagesPreview[i].conversation) {
           dialogsInCatalog.push(messagesPreview[i]);
         }
       }

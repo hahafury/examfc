@@ -20,6 +20,7 @@ app.use(handlerError);
 const toNewLog = new cronJob('0 0 * * * *', toNewLogFunction, null, true, 'America/Los_Angeles');
 toNewLog.start();
 
+
 const server = http.createServer(app);
 server.listen(PORT,
   () => console.log(`Example app listening on port ${ PORT }!`));

@@ -27,22 +27,23 @@ const DialogList = (props) => {
     event.stopPropagation();
   };
 
-  const onlyFavoriteDialogs = (chatPreview, userId) => chatPreview.favoriteList[chatPreview.participants.indexOf(userId)];
+  const onlyFavoriteDialogs = (chatPreview, userId) => chatPreview.Conversation.favoriteList[chatPreview.Conversation.participants.indexOf(userId)];
 
-  const onlyBlockDialogs = (chatPreview, userId) => chatPreview.blackList[chatPreview.participants.indexOf(userId)];
+  const onlyBlockDialogs = (chatPreview, userId) => chatPreview.Conversation.blackList[chatPreview.Conversation.participants.indexOf(userId)];
 
   const getTimeStr = (time) => {
     const currentTime = moment();
     if (currentTime.isSame(time, 'day')) return moment(time).format('HH:mm');
     if (currentTime.isSame(time, 'week')) return moment(time).format('dddd');
     if (currentTime.isSame(time, 'year')) return moment(time).format('MM DD');
+    console.log(currentTime)
     return moment(time).format('MMMM DD, YYYY');
   };
 
   const renderPreview = (filterFunc) => {
     const arrayList = [];
     const {
-      userId, preview, goToExpandedDialog, chatMode, removeChat, interlocutor,
+      userId, preview, goToExpandedDialog, chatMode, removeChat,
     } = props;
     preview.forEach((chatPreview, index) => {
       const dialogNode = (
